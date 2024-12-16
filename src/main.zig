@@ -1,5 +1,5 @@
 const std = @import("std");
-const day1 = @import("./day1/a.zig");
+const day = @import("./day2/day2.zig");
 
 pub fn main() !void {
     // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
@@ -12,7 +12,7 @@ pub fn main() !void {
     var bw = std.io.bufferedWriter(stdout_file);
     const stdout = bw.writer();
 
-    try stdout.print("Solution to day 1 part a: {}\n", .{try day1.a()});
+    try stdout.print("Solution to day 2 part a: {}\n", .{try day.a()});
 
     try bw.flush(); // don't forget to flush!
 }
